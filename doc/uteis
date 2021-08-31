@@ -13,3 +13,58 @@ usei H2
 
 verificar saúde da aplicação com actuator
 http://localhost:8080/actuator/health
+
+git iniciado no projeto
+
+=================== classe product =====================
+criação package model
+criação classe Product
+- id
+- name
+- amount
+
+annotações:
+@NoArgsConstructor - construtor vazio
+@AllArgsConstructor - todos construtores
+@Data - get's, set's e outros
+@Entity(name = "tb_name") - nome da tabela a ser criada
+suaClasse
+	@Id - campo onde vai ser o id da tabela (obrigatório)
+    	@GeneratedValue - deração do id auto
+	seuParamentro
+
+=================== repository product =====================
+criar interface na package repository
+colocar a anotação:
+@Repository - dizer ao spring que é uma classe repository
+extender a classe JPArepository
+
+
+==================== controller product ====================
+colocar as anotações:
+@RestController - dizer ao spring que é uma classe controller
+@RequestMapping(value = "/sua rota")
+sua classe{}
+
+instanciar um objeto da classe repository com anotação autowired
+	@Autowired
+    	ClasseRepository classeRepository;
+
+criar método para salvar
+@RequestMapping(method = RequestMethod.POST) - método POST para salvar
+    Obejeto salvar(método)(@RequestBody(pegando corpo) Obejeto objeto){
+        return classeRepository.salve(objeto);
+    }
+criar método para pesquisar por id
+@RequestMapping(value = "/{variavel}", method = RequestMethod.GET)
+    Objeto findById(@PathVariable TipoDaVariavel variavel){
+        return productRepository.findById(variavel);
+    }
+------------------------ atenção vai dar erro ----------------
+pois se caso a variavel não existir ou retornar nulo, tem que converter o objeto
+para optional; resultado:
+@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    Optional<Product> findById(@PathVariable Long id){
+        return productRepository.findById(id);
+    }
+
