@@ -1,0 +1,15 @@
+dependencias do projeto:
+Spring Boot Actuator
+Spring Web
+
+criar um projeto vazio
+importar um modulo existente
+- importar as pastas criadas no spring inicializer
+
+==== tentando fazer abrindo as pastas direto sem importar
+colocar o banco de dados para funcionar
+usei H2
+- adicionar configuração básica do h2 no arquivo application.properties da pasta resourses
+
+verificar saúde da aplicação com actuator
+http://localhost:8080/actuator/health
