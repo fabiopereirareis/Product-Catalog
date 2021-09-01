@@ -68,3 +68,39 @@ para optional; resultado:
         return productRepository.findById(id);
     }
 
+========================= continuação da aula ======================
+o professor usou outro banco de dados para diferenciar, nome do banco :"Redis"
+tambêm foi importado outro modulo pronto já com o banco funcionando
+
+criação de um novo projeto spring para usar o shoppingCart
+adiconado a linha : server.port=8081 para os micro serviços não conflitarem
+
+criação das classes Item, ShopCart no pacote model
+anotções @Entity para o banco de dados
+adicionado anotação na coluna items da tabela tb_shopcart
+criação da classe ShopCartController no pacote controller
+- método add
+- método findById
+- método clear
+
+criação da inteface ShopCartRepository no pacote repository
+implementei o swagger para ver os métodos do crud
+problema para adiconar item no carrinho ---------------------------
+problema estava no tratamento das informações, resolvi deixar igual ao projeto
+gestão de pessoas, está funcionando porem falta um tratamento para o carrinho de compras, pois é interessante poder adicionar e remover itens do mesmo carrinho
+
+========================== serviço de configuração =================
+criar novo projeto spring
+dependencias:
+Spring Web
+Spring Boot Actuator 
+Config Server
+
+importar como módulo para o projeto
+
+colocar a anotação na classe main
+@EnableConfigServer
+sua classe main
+
+mudar porta pára não conflitar entre os micro serviços
+
