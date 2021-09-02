@@ -121,4 +121,40 @@ git remote add origin https://github.com/fabiopereirareis/Product-Catalog.git
 git branch -M main
 git push -u origin main
 -------------------------------------------------------
+configurar o server config:
+recortar as configurações dos modulos para o arquivo que o sserver config vai ler
 
+definir um nome para cada modulo no arquivo de propriedades de cada modulo
+ adicionar o caminho do config server em cada arquivo de modulo do projeto
+tem que adicionar a implementação de cliente em cada modulo que for conectar ao  modulo service config
+
+parei aula 7, erro ao importar os arquivos necessários para client cloud
+
+-------------------------------------------------------------
+retomada:
+criei um novo projeto spring ja incluindo a dependeicia do client cloud
+deu erro tambem:
+Description:
+
+No spring.config.import property has been defined
+
+Action:
+
+Add a spring.config.import=configserver: property to your configuration.
+	If configuration is not required add spring.config.import=optional:configserver: instead.
+	To disable this check, set spring.cloud.config.enabled=false or
+	spring.cloud.config.import-check.enabled=false.
+------------------------------------------------------
+
+rever aula 6
+adicionado endereço repo do oswaldo para ver se funciona - voltei para o meu
+server rodando ok porta 8082
+ainda não piuxou as configurações do servidor
+coloquei essa implementação:
+implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+    bastante usuarios tiveram o memso problema(parece ser coisa de atualização)
+agora conectou ao servidor mas não pegou a configuração
+adicionei a linha no application.properties :
+spring.cloud.config.server.git.default-label=main
+no site oficial explica essa questão, tem que especificar a bransh do repositorio
+------------------ problema resolvido ------------------------
