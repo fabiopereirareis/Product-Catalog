@@ -162,3 +162,17 @@ não esquecer de colocar as implementações do cloud cliente nos micro serviço
 dica ----------- já adiciona o cloud cliente na criação do projeto :)
 ------------------ problema resolvido ------------------------
 avanço para aula 8
+config server serve para centralizar as configurações do micro serviços, um produção ele é alocado em um cluster
+
+service discovery:
+projeto spring -
+dependencias : eureka server , config client
+adicionar a anotação na classe principal
+@EnableEurekaServer
+public class ServiceDicoveryApplication {
+
+adiconar o server config no application properties
+
+criar arquivo de configuração no git
+discovert ok
+
