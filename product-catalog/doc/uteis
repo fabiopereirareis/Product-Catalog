@@ -157,4 +157,8 @@ agora conectou ao servidor mas não pegou a configuração
 adicionei a linha no application.properties :
 spring.cloud.config.server.git.default-label=main
 no site oficial explica essa questão, tem que especificar a bransh do repositorio
+da pra usar a extensão properties no remoto e yml no local sem problemas
+não esquecer de colocar as implementações do cloud cliente nos micro serviços
+dica ----------- já adiciona o cloud cliente na criação do projeto :)
 ------------------ problema resolvido ------------------------
+avanço para aula 8
