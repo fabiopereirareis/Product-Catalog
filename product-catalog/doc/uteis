@@ -190,3 +190,13 @@ eureka.client.fetchRegistry=false
 eureka.client.serviceUrl.defaultZone=http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
 eureka.client.server.wait-time-in-ms-when-sync-empty=3000
 ===============================================================================
+geteway
+criar projeto com dependeica:
+Spring Cloud Routing
+
+colocar nome e servidor da aplicação no application.properties
+implementar o eureka client:
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+colocar as paths dos serviços no no arquivo de config do gateway
+tive que colocar todas as configurações de cliente para poder funcionar
+ ------------------------------- funcionando -----------------------------
