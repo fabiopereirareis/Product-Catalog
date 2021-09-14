@@ -1,6 +1,6 @@
 ## Projeto desenvolvido no bootcamp Santander com a Digital Innovation One:
 
-### Sistema de catálogo de produtos desenvolido em arquitetura de micro serviços.
+### Sistema de catálogo de produtos desenvolvido em arquitetura de micro serviços.
 
 Esse projeto é um pequeno sistema  de micro serviços para catalogar produtos de um banco de dados .
 
